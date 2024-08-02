@@ -10,7 +10,7 @@ import * as Yup from "yup";
 import { useFormik } from 'formik';
 
 
-export const Signup = () => {
+export default function Signup() {
     const router = useRouter();
 
     const handleLoginSuccess = async (response: any) => {
@@ -101,5 +101,3 @@ export const Signup = () => {
         </Container>
     );
 }
-
-export default Signup
