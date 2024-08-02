@@ -7,7 +7,7 @@ import Box from "@mui/material/Box"
 type BoardProps = {
     items: Column[],
     handleDragEnd: (result: DropResult) => void
-    setDialogData: Dispatch<SetStateAction<Card>>,
+    setDialogData: Dispatch<SetStateAction<Card | undefined>>,
     handleEdit: () => void,
     handleView: () => void,
     handleDelete: (e: Card) => void,

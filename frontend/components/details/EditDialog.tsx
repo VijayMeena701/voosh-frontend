@@ -20,7 +20,7 @@ const Transition = React.forwardRef(function Transition(
 type ModalProps = {
     open: boolean,
     data: Card,
-    setData: React.Dispatch<React.SetStateAction<Card>>,
+    setData: React.Dispatch<React.SetStateAction<Card | undefined>>,
     handleSave: () => void,
     handleClose: () => void
 }
@@ -39,8 +39,8 @@ export default function DetailsDialogSlide({ open, data, setData, handleSave, ha
         >
             <DialogTitle>{"Edit Details"}</DialogTitle>
             <DialogContent>
-                <TextField fullWidth label="Title" variant='standard' name="title" value={data.title} onChange={(e) => setData(p => ({ ...p, [e.target.name]: e.target.value }))} />
-                <TextField fullWidth label="Description" variant='standard' name="desc" multiline minRows={3} maxRows={3} sx={{ mt: 1 }} value={data.desc} onChange={(e) => setData(p => ({ ...p, [e.target.name]: e.target.value }))} />
+                <TextField fullWidth label="Title" variant='standard' name="title" value={data.title} onChange={(e) => setData({ ...data, [e.target.name]: e.target.value })} />
+                <TextField fullWidth label="Description" variant='standard' name="desc" multiline minRows={3} maxRows={3} sx={{ mt: 1 }} value={data.desc} onChange={(e) => setData({ ...data, [e.target.name]: e.target.value })} />
 
             </DialogContent>
             <DialogActions>

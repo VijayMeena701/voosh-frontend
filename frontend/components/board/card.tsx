@@ -6,7 +6,7 @@ import { Paper, Box, Typography } from '@mui/material';
 
 type CardsProps = {
     cards: Card[],
-    setDialogData: Dispatch<SetStateAction<Card>>,
+    setDialogData: Dispatch<SetStateAction<Card | undefined>>,
     handleEdit: () => void,
     handleView: () => void,
     handleDelete: (e: Card) => void,
@@ -20,7 +20,7 @@ type CardProps = {
     item: Card,
     id: string,
     index: number,
-    setDialogData: Dispatch<SetStateAction<Card>>,
+    setDialogData: Dispatch<SetStateAction<Card | undefined>>,
     handleEdit: () => void,
     handleView: () => void,
     handleDelete: (e: Card) => void,

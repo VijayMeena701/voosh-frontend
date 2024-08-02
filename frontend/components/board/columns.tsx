@@ -6,7 +6,7 @@ import Cards from "./card";
 
 type ColumnsProps = {
     columns: Column[],
-    setDialogData: Dispatch<SetStateAction<Card>>,
+    setDialogData: Dispatch<SetStateAction<Card | undefined>>,
     handleEdit: () => void,
     handleView: () => void,
     handleDelete: (e: Card) => void
@@ -23,7 +23,7 @@ export default Columns;
 type ColumnProps = {
     column: Column,
     index: number,
-    setDialogData: Dispatch<SetStateAction<Card>>,
+    setDialogData: Dispatch<SetStateAction<Card | undefined>>,
     handleEdit: () => void,
     handleView: () => void,
     handleDelete: (e: Card) => void
