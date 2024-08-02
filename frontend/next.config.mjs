@@ -3,7 +3,7 @@ const nextConfig = {
     reactStrictMode: false,
     env: {
         JWT_SECRET: "JWT_SECRET",
-        BACKEND: "http://localhost:5000"
+        BACKEND: "https://voosh-backend-024v.onrender.com"
     }
 };
 
