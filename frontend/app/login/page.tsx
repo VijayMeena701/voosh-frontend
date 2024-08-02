@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Box, Button, Typography, Paper, TextField, Container, Divider } from '@mui/material';
 import React from 'react';
 
-export const Login = () => {
+export default function Login() {
     const router = useRouter();
 
     const handleLoginSuccess = async (response: any) => {
@@ -65,5 +65,3 @@ export const Login = () => {
         </Container>
     );
 }
-
-export default Login
